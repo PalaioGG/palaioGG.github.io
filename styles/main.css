@@ -1,0 +1,130 @@
+﻿body {
+}
+
+.palaioGG .navbar {
+    height: 100px;
+    background-color: black;
+}
+
+
+.palaioGG .avatar-wrapper {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 10px;
+    margin: 0 auto;
+}
+
+.palaioGG .avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin: 0 auto;
+}
+
+.palaioGG .menu-wrapper {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 50%;
+    background-color: #39215E;
+}
+
+.palaioGG .menu-wrapper .menu-icons {
+    display: inline-block;
+    line-height: 18;
+    text-indent: 7px;
+}
+
+.palaioGG .menu-wrapper .menu-icons.skills-link {  }
+.palaioGG .menu-wrapper .menu-icons.projects-link {  }
+.palaioGG .menu-wrapper .menu-icons.contact-link {  }
+
+.palaioGG .navbar .menu-list-item {
+    color: #fff;
+    margin: 25px;
+}
+
+.palaioGG .jumbotron { padding: 0!important; margin-bottom: 0!important; }
+
+.palaioGG .jumbotron .main-img {
+    width: 100%;
+    height: 800px;
+}
+
+.palaioGG .skillset {
+    height: 800px;
+    padding-top: 40px;
+    background-color: black;
+    color: #fff;
+}
+
+.palaioGG .title-straight-line { 
+    border-top: 1px solid white; 
+    width: 300px; 
+    height: 2px; 
+    display: block;
+}
+
+.palaioGG .skillset .skillset-container { padding-top: 80px; }
+.palaioGG .skillset .skillset-container .border-line { border-right: 2px solid white; }
+
+.palaioGG .skillset .skill-wrapper {
+    height: 200px;
+}
+
+.palaioGG .skillset .skill-wrapper .logo-holder { width: 60px; display: block; margin: 0 auto; padding: 20px; margin-bottom: 20px; }
+.palaioGG .skillset .skill-wrapper .skill-logo { width: 60px; }
+.palaioGG .skillset .skill-wrapper .skill-logo.float-fix { float: right; margin-bottom: 40px; }
+.palaioGG .skillset .skill-wrapper .skill-title { bottom: 20px; }
+
+/*projects section*/
+.palaioGG .projects {
+    height: 800px;
+    background-color: #071014;
+    color: white;
+    padding-top: 40px;
+}
+
+.border-ruler { border: 1px solid white; }
+
+
+/*c3 charts*/
+#donut-html-chart,
+#donut-css-chart,
+#donut-bootstrap-chart,
+#donut-js-chart,
+#donut-angular-chart,
+#donut-will-chart { height: 150px; }
+
+#donut-html-chart .c3-arc-skill-remain,
+#donut-css-chart .c3-arc-skill-remain,
+#donut-bootstrap-chart .c3-arc-skill-remain,
+#donut-js-chart .c3-arc-skill-remain,
+#donut-angular-chart .c3-arc-skill-remain,
+#donut-will-chart .c3-arc-skill-remain { display: none; }
+
+#donut-html-chart .c3-arc-skill-remain,
+#donut-css-chart .c3-arc-skill-remain,
+#donut-bootstrap-chart .c3-arc-skill-remain,
+#donut-js-chart .c3-arc-skill-remain,
+#donut-angular-chart .c3-arc-skill-remain,
+#donut-will-chart .c3-arc-skill-remaim .c3-shapes-skill-remain text { display: none; color: pink; }
+
+/*remove border*/
+#donut-html-chart .c3-chart-arc path,
+#donut-css-chart .c3-chart-arc path,
+#donut-bootstrap-chart .c3-chart-arc path,
+#donut-js-chart .c3-chart-arc path,
+#donut-angular-chart .c3-chart-arc path,
+#donut-will-chart .c3-chart-arc path { stroke: none; }
+
+/*remove legend*/
+#donut-html-chart .c3-legend-item,
+#donut-css-chart .c3-legend-item,
+#donut-bootstrap-chart .c3-legend-item,
+#donut-js-chart .c3-legend-item,
+#donut-angular-chart .c3-legend-item,
+#donut-will-chart .c3-legend-item { opacity: 0; display: none; }
