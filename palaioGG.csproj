@@ -100,6 +100,8 @@
   <ItemGroup>
     <Content Include="img\angular_logo.png" />
     <Content Include="img\Boostrap_logo.svg" />
+    <Content Include="img\brutalism.jpg" />
+    <Content Include="img\case1.jpg" />
     <Content Include="img\css_logo.png" />
     <Content Include="img\html_logo.png" />
     <Content Include="img\javascript_logo.png" />
@@ -193,6 +195,12 @@
     <Content Include="Content\bootstrap\bootstrap-reboot.scss" />
     <Content Include="Content\bootstrap\bootstrap-grid.scss" />
     <Content Include="Content\bootstrap\bootstrap-flex.scss" />
+    <Content Include="fonts\Whipsmart.ttf" />
+    <Content Include="fonts\AMBROSIA_DEMO.ttf" />
+    <Content Include="fonts\Pinstripe_Limo.ttf" />
+    <Content Include="fonts\whitrabt.ttf" />
+    <Content Include="fonts\Walkway_Black.ttf" />
+    <Content Include="fonts\chintzy.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
