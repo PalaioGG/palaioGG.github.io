@@ -100,8 +100,6 @@
   <ItemGroup>
     <Content Include="img\angular_logo.png" />
     <Content Include="img\Boostrap_logo.svg" />
-    <Content Include="img\brutalism.jpg" />
-    <Content Include="img\case1.jpg" />
     <Content Include="img\css_logo.png" />
     <Content Include="img\html_logo.png" />
     <Content Include="img\javascript_logo.png" />
@@ -215,8 +213,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="img\avatar.jpg" />
-    <Content Include="img\jumbotron.jpg" />
-    <Content Include="img\jumbotron1.jpg" />
     <Content Include="index.html" />
     <Content Include="js\mainController.js" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />

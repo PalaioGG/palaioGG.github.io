@@ -246,7 +246,7 @@
     transform: rotate(35deg); 
 }
 
-@media (max-width: 658px) {
+@media screen and (max-device-width: 658px) {
     .palaioGG .main .avatar {
         width: 180px;
         height: 180px;
