@@ -4,6 +4,9 @@
     <title>palaioGG - Portfolio</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Giorgos Palaiologos, palaioGG, portfolio, Front-End Developer, Web Development">
+    <meta name="description" content="Giorgos Palaiologos - Front-End Developer / Portfolio">
+    <meta name="author" content="Giorgos Palaiologos [palaioGG]">
     <!-- stylesheet -->
     <link rel="stylesheet" href="styles/main.css" />
     <!-- bootstrap -->
@@ -31,8 +34,8 @@
     <!-- LinkedIn Badge -->
     <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </head>
-<body ng-controller="palaioController">
-    <div class="palaioGG">
+<body id="container1" ng-controller="palaioController">
+    <div class="palaioGG" id="container2">
         <!--<div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12">
@@ -252,10 +255,14 @@
                         </div>
                         <div id="myNav" class="overlay">
                             <div class="overlay-content">
-                                <a href="#">About</a>
+                                <a href="#about">About</a>
                                 <a href="#">Skills</a>
                                 <a href="#">Projects</a>
                                 <a href="#">Contact</a>
+                            </div>
+                            <div id="construction_msg">
+                                <h6>Site Under Constrvction</h6>
+                                <h6>More Content Soon</h6>
                             </div>
                         </div>
                         <div class="row">
@@ -276,7 +283,18 @@
                             </div>
                         </div>
                         <div id="stripe_top"></div>
-                        <div id="stripe_bottom"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="about" id="about">
+                    <div class="stripe-container">
+                        <div class="stripe2_wrapper">
+                            <div id="stripe2"></div>
+                        </div>
+                        <div class="stripe3_wrapper">
+                            <div id="stripe3"></div>
+                        </div>
                     </div>
                 </div>
             </div>

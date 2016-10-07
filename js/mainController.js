@@ -17,19 +17,26 @@ myApp.controller('palaioController', [
         $scope.controlNav = function () {
             var nav = document.getElementById("myNav");
             var ver = document.getElementById("version");
+            var con_msg = document.getElementById("construction_msg");
 
             if ($scope.menu_visible === false) {
                 $scope.menu_visible = true;
 
                 nav.style.width = "100%";
                 ver.style.color = "white";
+                con_msg.style.display = "block";
             }
             else {
                 $scope.menu_visible = false;
                 nav.style.width = "0%";
                 ver.style.color = "black";
+                con_msg.style.display = "none";
             };
         };
+
+        window.onscroll = function (e) {
+            console.log("scrolling");
+        }
 
 
     }
