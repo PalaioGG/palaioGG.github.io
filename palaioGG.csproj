@@ -100,6 +100,10 @@
   <ItemGroup>
     <Content Include="img\angular_logo.png" />
     <Content Include="img\Boostrap_logo.svg" />
+    <Content Include="img\cityscape.png" />
+    <Content Include="img\cityscape_bg.png" />
+    <Content Include="img\cityscape_reflection.png" />
+    <Content Include="img\cityscape_shadow.png" />
     <Content Include="img\css_logo.png" />
     <Content Include="img\html_logo.png" />
     <Content Include="img\javascript_logo.png" />
@@ -1017,6 +1021,7 @@
     <Content Include="scripts\jquery-3.1.0.slim.js" />
     <Content Include="scripts\jquery-3.1.0.slim.min.js" />
     <Content Include="styles\main.css" />
+    <Content Include="styles\responsive.css" />
     <Content Include="Web.config" />
     <Content Include="scripts\version.json" />
   </ItemGroup>

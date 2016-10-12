@@ -7,8 +7,9 @@
     <meta name="keywords" content="Giorgos Palaiologos, palaioGG, portfolio, Front-End Developer, Web Development">
     <meta name="description" content="Giorgos Palaiologos - Front-End Developer / Portfolio">
     <meta name="author" content="Giorgos Palaiologos [palaioGG]">
-    <!-- stylesheet -->
+    <!-- stylesheets -->
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
     <!-- bootstrap -->
     <link rel="stylesheet" href="Content/bootstrap.css" />
     <!-- font awesome -->
@@ -36,213 +37,9 @@
 </head>
 <body id="container1" ng-controller="palaioController">
     <div class="palaioGG" id="container2">
-        <!--<div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12">
-                    <nav class="navbar navbar-fixed-top">
-                        <div class="container">
-                            <div class="menu-wrapper">
-                                <a class="nav-link menu-list-item" href="">
-                                    <div class="avatar-wrapper">
-                                        <img class="avatar" src="img/avatar.jpg" />
-                                    </div>
-                                </a>
-                                <div class="icons-container">
-                                    <div class="menu-icons skills-link">
-                                        <a href="">
-                                            <i class="fa fa-pie-chart fa-2x" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                    <div class="menu-icons projects-link">
-                                        <a href="">
-                                            <i class="fa fa-briefcase fa-2x" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                    <div class="menu-icons contact-link">
-                                        <a href="">
-                                            <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="version-badge">
-                                    <h3 class="version-title">Pre-Alpha Version</h3>
-                                </div>
-                            </div>
-                        </div>
-
-                    </nav>
-                </div>
-            </div>
-            <div class="row">
-                <div class="jumbotron">
-                    <img class="main-img" src="img/jumbotron1.jpg" />
-                </div>
-            </div>
-            <div class="row" id="about">
-                <div class="skillset">
-                    <div class="col-sm-12 col-md-8 offset-md-2">
-                        <h3>Skills<span class="title-straight-line"></span></h3>
-                        <div class="skillset-container">
-                            <div class="row">
-                                <div class="col-sm-12 col-md-6 border-line">
-                                    <div class="skill-wrapper">
-                                        <div class="col-xs-4 pull-xs-right">
-                                            <div class="logo-holder">
-                                                <img class="skill-logo" src="img/html_logo.png" />
-                                            </div>
-                                            <h4 class="text-xs-right">HTML</h4>
-                                        </div>
-                                        <div class="col-xs-8">
-                                            <c3chart bindto-id="donut-html-chart">
-                                                <chart-column column-id="skill_progress"
-                                                              column-values="75"
-                                                              column-type="donut" />
-                                                <chart-column column-id="skill_remain"
-                                                              column-values="25"
-                                                              column-type="donut" />
-                                                <chart-donut title="HTML" width="20" />
-                                            </c3chart>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="skill-wrapper">
-                                        <div class="col-xs-4 pull-left">
-                                            <div class="logo-holder">
-                                                <img class="skill-logo float-fix" src="img/css_logo.png" />
-                                            </div>
-                                            <h4 class="skill-title">CSS</h4>
-                                        </div>
-                                        <div class="col-xs-8">
-                                            <c3chart bindto-id="donut-css-chart">
-                                                <chart-column column-id="skill_progress"
-                                                              column-values="68"
-                                                              column-type="donut" />
-                                                <chart-column column-id="skill_remain"
-                                                              column-values="32"
-                                                              column-type="donut" />
-                                                <chart-donut title="HTML" width="20" />
-                                            </c3chart>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12 col-md-6 border-line">
-                                    <div class="skill-wrapper">
-                                        <div class="col-xs-4 pull-xs-right">
-                                            <div class="logo-holder">
-                                                <img class="skill-logo" src="img/Boostrap_logo.svg" />
-                                            </div>
-                                            <h4 class="text-xs-right">Bootstrap</h4>
-                                        </div>
-                                        <div class="col-xs-8">
-                                            <c3chart bindto-id="donut-bootstrap-chart">
-                                                <chart-column column-id="skill_progress"
-                                                              column-values="65"
-                                                              column-type="donut" />
-                                                <chart-column column-id="skill_remain"
-                                                              column-values="35"
-                                                              column-type="donut" />
-                                                <chart-donut title="HTML" width="20" />
-                                            </c3chart>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-md-6">
-                                    <div class="skill-wrapper">
-                                        <div class="col-xs-4">
-                                            <div class="logo-holder">
-                                                <img class="skill-logo float-fix" src="img/javascript_logo.png" />
-                                            </div>
-                                            <h4 class="skill-title text-xs-left">Javascript</h4>
-                                        </div>
-                                        <div class="col-xs-8">
-                                            <c3chart bindto-id="donut-js-chart">
-                                                <chart-column column-id="skill_progress"
-                                                              column-values="48"
-                                                              column-type="donut" />
-                                                <chart-column column-id="skill_remain"
-                                                              column-values="52"
-                                                              column-type="donut" />
-                                                <chart-donut title="HTML" width="20" />
-                                            </c3chart>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12 col-md-6 border-line">
-                                    <div class="skill-wrapper">
-                                        <div class="col-xs-4 pull-xs-right">
-                                            <div class="logo-holder">
-                                                <img class="skill-logo" src="img/angular_logo.png" />
-                                            </div>
-                                            <h4 class="text-xs-right">AngularJS</h4>
-                                        </div>
-                                        <div class="col-xs-8 pull-right">
-                                            <c3chart bindto-id="donut-angular-chart">
-                                                <chart-column column-id="skill_progress"
-                                                              column-values="46"
-                                                              column-type="donut" />
-                                                <chart-column column-id="skill_remain"
-                                                              column-values="54"
-                                                              column-type="donut" />
-                                                <chart-donut title="HTML" width="20" />
-                                            </c3chart>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-md-6">
-                                    <div class="skill-wrapper">
-                                        <div class="col-xs-4 pull-left">
-                                            <div class="logo-holder">
-                                                <img class="skill-logo float-fix" src="img/will_logo.png" />
-                                            </div>
-                                            <h4 class="skill-title">Willpower</h4>
-                                        </div>
-                                        <div class="col-xs-8">
-                                            <c3chart bindto-id="donut-will-chart">
-                                                <chart-column column-id="skill_progress"
-                                                              column-values="100"
-                                                              column-type="donut" />
-                                                <chart-donut title="HTML" width="20" />
-                                            </c3chart>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row" id="projects">
-                <div class="projects">
-                    <div class="col-xs-8 offset-xs-2">
-                        <h3>Projects<span class="title-straight-line"></span></h3>
-                        <div class="projects-container">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row" id="contact">
-                <div class="contact">
-                    <div class="col-xs-12 col-md-8 offset-md-2">
-                        <h3>You can spot me on: <span class="title-straight-line"></span></h3>
-                        <div class="contact-container">
-                            <div class="LI-profile-badge" data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="giorgos-palaiologos-878958112"><a class="LI-simple-link" href='https://gr.linkedin.com/in/giorgos-palaiologos-878958112?trk=profile-badge'>Giorgos Palaiologos</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
         <div class="container-fluid">
             <div class="row">
-                <div class="main">
+                <div class="main bg-layer">
                     <div class="col-xs-12">
                         <div id="nav-icon3" ng-click="controlNav()" ng-class="{'open': menu_visible === true}">
                             <span></span>
@@ -267,34 +64,88 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                <div class="avatar-wrapper">
+                                <div class="avatar-wrapper content-layer">
                                     <img class="avatar" src="img/avatar.jpg" />
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                <div class="title-container">
+                                <div class="title-container content-layer">
                                     <h2>Motivated <span id="front_dev">Front-End Developer</span></h2>
-                                    <h2 id="interested">Interested in</h2> 
+                                    <h2 id="interested">Interested in</h2>
                                     <h2><span id="web">web development</span> and <span id="design">design</span></h2>
                                     <h2><span id="substance">Passionate</span> knowledge seeker.</h2>
                                 </div>
                             </div>
                         </div>
-                        <div id="stripe_top"></div>
+                        <div class="stripes-layer" id="stripe_top"></div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="about" id="about">
+                <div class="about bg-layer" id="about">
                     <div class="stripe-container">
                         <div class="stripe2_wrapper">
-                            <div id="stripe2"></div>
+                            <div class="stripes-layer" id="stripe2"></div>
+                            <!--<div class="bg-layer" id="patch2"></div>-->
                         </div>
-                        <div class="stripe3_wrapper">
-                            <div id="stripe3"></div>
+                        <div class="stripe3_wrapper bg-layer">
+                            <div class="stripes-layer" id="stripe3"></div>
+                            <!--<div class="bg-layer" id="patch3"></div>-->
+                            <!--<div class="bg-layer" id="patch4"></div>-->
                         </div>
+                    </div>
+                    <div class="cityscape-wrapper graphics-layer">
+                        <img class="cityscape shadow" src="img/cityscape_shadow.png" />
+                        <img class="cityscape bg" src="img/cityscape_bg.png" />
+                        <img class="cityscape real" src="img/cityscape.png" />
+                        <img class="cityscape reflection" src="img/cityscape_reflection.png" />
+
+                    </div>
+                    <div class="about-content">
+                        <div class="col-md-6 offset-md-6 col-xs-12">
+                            <h1 id="about_title">About</h1>
+                            <div class="row">
+                                <div>
+                                    <div class="about-text">
+                                        <p>
+                                            My name is Giorgos Palaiologos. I'm a 26yo dude in <i class="fa fa-heart fa-2x" aria-hidden="true"></i> with Front-End development.
+                                            I'm currently living in my home town in Greece, working alone, refining my programming skills and researching new technologies. 
+                                            During my six months internship I've gained valuable knowledge which
+                                            allowed me to further explore the techniques used by professionals in web programming.
+                                        </p>
+                                        <p>
+                                            I understand that technology is always moving too fast so I'm trying to adopt to the changes ASAP. 
+                                            Programming is not fixed, that's why I'm always expanding my knowledge day by day.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stripe_container_about_bottom">
+                        <div class="stripe4_wrapper">
+                            <div id="stripe4"></div>
+                            <div class="bg-layer" id="patch5"></div>
+                            <!--<div class="cityscape-wrapper reflection-wrapper">
+                                <img class="cityscape reflection" src="img/cityscape_reflection.png" />
+                            </div>-->
+                        </div>
+                        <div id="stripe5_wrapper">
+                            <div class="bg-layer" id="patch6"></div>
+                            <div id="stripe5"></div>
+                            <!--<div id="patch7-guide">
+                                <div class="bg-layer" id="patch7"></div>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="skills" id="skills">
+                    <div class="col-lg-8 offset-lg-2">
+                        <h2>Skills</h2>
                     </div>
                 </div>
             </div>

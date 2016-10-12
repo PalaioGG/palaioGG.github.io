@@ -34,10 +34,32 @@ myApp.controller('palaioController', [
             };
         };
 
-        window.onscroll = function (e) {
-            console.log("scrolling");
-        }
+        //var counter = 0;
+        //window.onscroll = function (e) {
+        //    var scroll_pos = $(window).scrollTop()
+        //    var start_pos = scroll_pos;
+        //    var offset_top = $(".stripe-container").offset().top;
+            
+        //    counter += 10;
 
+        //    console.log("stripes top: " + offset_top);
+        //    //console.log("counter: " + counter);
+
+        //    console.log("scroll position: " + scroll_pos + "px");
+        //    if (scroll_pos >= 145 && scroll_pos < 160) {
+        //        //while (offset_top.top < 600) {
+        //            $(".stripe-container").offset({ top: offset_top - scroll_pos });
+        //        //};
+        //    };
+        //}
+        
+        //var x = $("#about_title").offset();
+        //console.log("Top: " + x.top + " Left: " + x.left)
+
+        
+
+        
+        console.log($(window).scrollTop());
 
     }
 ]);
