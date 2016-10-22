@@ -1,16 +1,9 @@
-﻿var myApp = angular.module('palaioApp', ['gridshore.c3js.chart']);
+﻿var myApp = angular.module('palaioApp', []);
 
 myApp.controller('palaioController', [
     '$scope',
-    function ($scope) {
-        
-        //$(document).ready(function () {
-        //    $('button').click(function () {
-        //        var stripes = $('#stripe_top');
-        //        stripes.css("border-top", '5px dashed black');
-        //        stripes.animate({transform: 'rotate(90deg)'}, 'slow');
-        //    });
-        //});
+    '$window',
+    function ($scope, $window) {
 
         $scope.menu_visible = false;
 
@@ -34,33 +27,93 @@ myApp.controller('palaioController', [
             };
         };
 
-        //var counter = 0;
-        //window.onscroll = function (e) {
-        //    var scroll_pos = $(window).scrollTop()
-        //    var start_pos = scroll_pos;
-        //    var offset_top = $(".stripe-container").offset().top;
-            
-        //    counter += 10;
+        angular.element($window).bind('resize', function () {
+            var x = 200;
+            var y =  Math.round(window.innerWidth / 7);
+            if (y < 200 && y > 60) {
+                $scope.$apply(function () {
+                    $scope.radiusResize = y;
+                });
+            };
+            console.log('y: ' + y);
+            console.log('radius: ' + $scope.radius);
+        });
 
-        //    console.log("stripes top: " + offset_top);
-        //    //console.log("counter: " + counter);
+        //console.log($(window).scrollTop());
 
-        //    console.log("scroll position: " + scroll_pos + "px");
-        //    if (scroll_pos >= 145 && scroll_pos < 160) {
-        //        //while (offset_top.top < 600) {
-        //            $(".stripe-container").offset({ top: offset_top - scroll_pos });
-        //        //};
-        //    };
-        //}
-        
-        //var x = $("#about_title").offset();
-        //console.log("Top: " + x.top + " Left: " + x.left)
+        //console.log(window.innerWidth);
 
-        
+        $scope.$watch('radiusResize', function(newValue, oldValue) {
+            $scope.radius = $scope.radiusResize;
+            console.log('WATCHradius: ' + $scope.radius);
+        });
 
-        
-        console.log($(window).scrollTop());
+        if (window.innerWidth < 540) {
+            $scope.radius = 150;
+        } else $scope.radius = 200;
+
+        $scope.HTML = { name: 'HTML', percent: 74 };
+        $scope.CSS = { name: 'CSS', percent: 72 };
+        $scope.bootstrap = { name: 'Bootstrap', percent: 70 };
+        $scope.responsive = { name: 'Responsive', percent: 66 };
+        $scope.javascript = { name: 'Javascript', percent: 54 };
+        $scope.angular = { name: 'AngularJS', percent: 48 };
 
     }
-]);
+])
+
+myApp.directive('d3Donut', function () {
+    return {
+        restrict: 'EΑ',
+        scope: {
+            radius: '=',
+            percent: '='
+        },
+        link: function (scope, element, attrs) {
+
+            var radius = scope.radius
+            var percent = scope.percent;
+            var text = scope.text;
+            var container = $('.skill-container');
+            var width = container.width();
+            var height = container.height();
+
+            var svg = d3.select(element[0])
+			.append('svg')
+			.attr('width', radius / 2 + 'px')
+			.attr('height', radius / 2 + 'px');
+
+            var donutScale = d3.scale.linear().domain([0, 100]).range([0, 2 * Math.PI]);
+            var color = "#FFF3C1";
+            var data = [[0, 100, "transparent"], [0, percent, color]];
+
+            var arc = d3.svg.arc()
+			.innerRadius(radius / 6)
+			.outerRadius(radius / 4)
+			.startAngle(function (d) { return donutScale(d[0]); })
+			.endAngle(function (d) { return donutScale(d[1]); });
+
+            svg.selectAll("path")
+			.data(data)
+			.enter()
+			.append("path")
+			.attr("d", arc)
+			.style("fill", function (d) { return d[2]; })
+			.style("stroke", "#403D30")
+			.attr("transform", "translate(" + radius / 4 + "," + radius / 4 + ")");
+
+            svg.append("text")
+			.attr("x", radius / 4)
+			.attr("y", radius / 4)
+			.attr("dy", ".35em")
+			.attr("text-anchor", "middle")
+			.attr("font-size", "18px")
+			.style("fill", color)
+			.attr("text-anchor", "middle")
+            .text(percent + '%');
+
+        }
+    };
+});
+
 

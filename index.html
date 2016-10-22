@@ -21,19 +21,8 @@
     <script src="scripts/jquery-3.1.0.min.js"></script>
     <!-- controller -->
     <script src="js/mainController.js"></script>
-    <!-- c3 charts library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.css" />
-
+    <!-- D3.js -->
     <script type="text/javascript" src="scripts/d3-3.5.17.min.zopfli.js"></script>
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
-
-    <script src="scripts/c3-angular.js"></script>
-    <script src="scripts/c3-angular.min.js"></script>
-    <!-- LinkedIn Badge -->
-    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </head>
 <body id="container1" ng-controller="palaioController">
     <div class="palaioGG" id="container2">
@@ -88,12 +77,9 @@
                     <div class="stripe-container">
                         <div class="stripe2_wrapper">
                             <div class="stripes-layer" id="stripe2"></div>
-                            <!--<div class="bg-layer" id="patch2"></div>-->
                         </div>
                         <div class="stripe3_wrapper bg-layer">
                             <div class="stripes-layer" id="stripe3"></div>
-                            <!--<div class="bg-layer" id="patch3"></div>-->
-                            <!--<div class="bg-layer" id="patch4"></div>-->
                         </div>
                     </div>
                     <div class="cityscape-wrapper graphics-layer">
@@ -104,19 +90,19 @@
 
                     </div>
                     <div class="about-content">
-                        <div class="col-md-6 offset-md-6 col-xs-12">
+                        <div class="col-md-5 offset-md-7 col-xs-12">
                             <h1 id="about_title">About</h1>
                             <div class="row">
                                 <div>
                                     <div class="about-text">
                                         <p>
                                             My name is Giorgos Palaiologos. I'm a 26yo dude in <i class="fa fa-heart fa-2x" aria-hidden="true"></i> with Front-End development.
-                                            I'm currently living in my home town in Greece, working alone, refining my programming skills and researching new technologies. 
+                                            I'm currently living in my home town in Greece, working alone, refining my programming skills and researching new technologies.
                                             During my six months internship I've gained valuable knowledge which
                                             allowed me to further explore the techniques used by professionals in web programming.
                                         </p>
                                         <p>
-                                            I understand that technology is always moving too fast so I'm trying to adopt to the changes ASAP. 
+                                            I understand that technology is always moving too fast so I'm trying to adopt to the changes ASAP.
                                             Programming is not fixed, that's why I'm always expanding my knowledge day by day.
                                         </p>
                                     </div>
@@ -128,16 +114,10 @@
                         <div class="stripe4_wrapper">
                             <div id="stripe4"></div>
                             <div class="bg-layer" id="patch5"></div>
-                            <!--<div class="cityscape-wrapper reflection-wrapper">
-                                <img class="cityscape reflection" src="img/cityscape_reflection.png" />
-                            </div>-->
                         </div>
                         <div id="stripe5_wrapper">
                             <div class="bg-layer" id="patch6"></div>
                             <div id="stripe5"></div>
-                            <!--<div id="patch7-guide">
-                                <div class="bg-layer" id="patch7"></div>
-                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -145,7 +125,181 @@
             <div class="row">
                 <div class="skills" id="skills">
                     <div class="col-lg-8 offset-lg-2">
-                        <h2>Skills</h2>
+                        <h1 class="skills-title">Skills</h1>
+                        <div class="skillset content-layer">
+                            <div class="row">
+                                <div class="col-xs-10 offset-xs-1 col-md-6 offset-md-0">
+                                    <div class="skill-container">
+                                        <div class="row">
+                                            <div class="col-xs-4">
+                                                <d3-donut radius="radius" percent="HTML.percent"></d3-donut>
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <div class="logo-wrapper pull-xs-right">
+                                                    <img class="skill-logo" src="img/html_logo.png" />
+                                                    <p class="skill-label text-xs-center">HTML</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-10 offset-xs-1 col-md-6 offset-md-0">
+                                    <div class="skill-container">
+                                        <div class="row">
+                                            <div class="col-xs-8">
+                                                <div class="logo-wrapper pull-xs-left">
+                                                    <img class="skill-logo" src="img/css_logo.png" />
+                                                    <p class="skill-label text-xs-center">CSS</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="donut-wrapper pull-xs-right">
+                                                    <d3-donut radius="radius" percent="CSS.percent"></d3-donut>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-10 offset-xs-1 col-md-6 offset-md-0">
+                                    <div class="skill-container">
+                                        <div class="row">
+                                            <div class="col-xs-4">
+                                                <d3-donut radius="radius" percent="bootstrap.percent"></d3-donut>
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <div class="logo-wrapper pull-xs-right">
+                                                    <img class="skill-logo" src="img/bootstrap_logo.svg" />
+                                                    <p class="skill-label text-xs-center">Bootstrap</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-10 offset-xs-1 col-md-6 offset-md-0">
+                                    <div class="skill-container">
+                                        <div class="row">
+                                            <div class="col-xs-8">
+                                                <div class="logo-wrapper pull-xs-left">
+                                                    <img class="skill-logo" src="img/responsive_logo.png" />
+                                                    <p class="skill-label text-xs-center">Responsive Design</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="donut-wrapper pull-xs-right">
+                                                    <d3-donut radius="radius" percent="responsive.percent"></d3-donut>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-10 offset-xs-1 col-md-6 offset-md-0">
+                                    <div class="skill-container">
+                                        <div class="row">
+                                            <div class="col-xs-4">
+                                                <d3-donut radius="radius" percent="javascript.percent"></d3-donut>
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <div class="logo-wrapper pull-xs-right">
+                                                    <img class="skill-logo" src="img/javascript_logo.png" />
+                                                    <p class="skill-label text-xs-center">Javascript</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-10 offset-xs-1 col-md-6 offset-md-0">
+                                    <div class="skill-container">
+                                        <div class="row">
+                                            <div class="col-xs-8">
+                                                <div class="logo-wrapper pull-xs-left">
+                                                    <img class="skill-logo" src="img/angular_logo.png" />
+                                                    <p class="skill-label text-xs-center">AngularJS</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="donut-wrapper pull-xs-right">
+                                                    <d3-donut radius="radius" percent="angular.percent"></d3-donut>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="projects" id="projects">
+                    <div class="col-md-10 offset-md-1">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="contact" id="contact">
+                    <div class="container-fluid">
+                        <div class="col-lg-8 offset-lg-2 col-xs-12">
+                            <div class="row">
+                                <div class="contact-details">
+                                    <div class="col-md-4 text-xs-center">
+                                        <h5 class="contact-title">Contact</h5>
+                                        <a class="email" href="mailto:geo.pal@hotmail.com">geo.pal@hotmail.com</a>
+                                    </div>
+                                    <div class="col-md-4 text-xs-center">
+                                        <h5 class="connect-title">Connect</h5>
+                                        <div class="social-bar">
+
+                                            <a href="https://gr.linkedin.com/in/giorgos-palaiologos-878958112" target="_blank">
+                                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                            </a>
+
+                                            <a href="https://github.com/PalaioGG" target="_blank">
+                                                <i class="fa fa-github" aria-hidden="true"></i>
+                                            </a>
+
+                                            <a href="https://twitter.com/PalaioGG" target="_blank">
+                                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-xs-center">
+                                        <h5 class="subscribe-title">Subscribe (soon to come)</h5>
+
+                                        <i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="closing-message">
+                                        <p>A few words about this site:</p>
+                                        <p>
+                                            This site was designed and developed by me, as a mean to practice and test my capabilities.
+                                            Technologies I used include: HTML-CSS, Bootstrap and Javascript (AngularJS, jQuery). I also used the D3.js library for the donuts in skills section
+                                            and the Font-Awesome toolkit for the social icons. This product is not final and I'll keep updating the content whenever I find it necessary.
+                                            You can find the whole project in my GitHub account right <a href="https://github.com/PalaioGG/palaioGG.github.io" target="_blank">here</a>.
+                                            Thank you for visiting and I hope to hear from you soon!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="footer-rights">
+                                        <h5 class="text-xs-center">Powered by GitHub Pages</h5>
+                                        <h5 class="text-xs-center">Developed by Giorgos Palaiologos</h5>
+                                        <h5 class="text-xs-center">Copyright &copy; Giorgos Palaiologos - palaioGG&trade;</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
